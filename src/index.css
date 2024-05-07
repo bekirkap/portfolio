@@ -17,3 +17,6 @@
     @apply font-montserrat;
   }
 }
+form{
+  width: 100%;
+}
