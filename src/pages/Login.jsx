@@ -1,15 +1,18 @@
-import { useState } from "react"
+import React from "react"
+import { useContext, useState } from "react"
 import tiger from "../img/pngwing.com.png"
+import { AuthContext } from "../context/AuthProvider"
 
 const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const {login} = useContext(AuthContext)
   
   const handleSubmit = (e) =>{
     e.preventDefault()
     console.log({email, password});
     if (email == "admin@gmail.com" && password == "123456") {
-      // login({email, password}) 
+      login({email, password}) 
 
     } else {
       alert("Please enter valid user information")
