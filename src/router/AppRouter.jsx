@@ -5,11 +5,12 @@ import Home from "../pages/Home"
 import About from "../pages/About"
 import Products from "../pages/Products";
 import Notfound from "../pages/Notfound"
+import Navbar from "../context/components/Navbar";
 
 const AppRouter = () => {
   return (
-    
-    
+      <>
+      <Navbar/>
     <Routes>
       <Route path="/" element={ <Login/>}/>
       <Route path="/home" element={ <Home/>}/>
@@ -18,7 +19,7 @@ const AppRouter = () => {
       <Route path="*" element={ <Notfound/>}/>
       
     </Routes>
-   
+      </>
 
     
 
