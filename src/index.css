@@ -23,3 +23,6 @@ form{
 .logouticon{
   cursor: pointer;
 }
+.menubtn{
+  transition: 1s;
+}
