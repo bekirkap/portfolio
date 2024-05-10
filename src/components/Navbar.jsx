@@ -1,22 +1,22 @@
 import React, { useState } from 'react'
-import tiger from "../../img/pngwing.com.png"
+import tiger from "../img/pngwing.com.png"
 import { NavLink } from 'react-router-dom'
-import { logoutIcon, openNavbar, closeNavbar } from '../../helpers/icons'
-import "../../index.css"
+import { logoutIcon, openNavbar, closeNavbar } from '../helpers/icons'
+import "../index.css"
 
 const Navbar = () => {
     const navigation = [
         {
           title: "Home",
-          path: "/home",
+          path: "/dashboard/home",
         },
         {
           title: "Products",
-          path: "/products",
+          path: "/dashboard/products",
         },
         {
           title: "About",
-          path: "/about",
+          path: "/dashboard/about",
         },]
 
 const [show, setShow] = useState(false)
