@@ -30,7 +30,7 @@ const {logout} = useContext(AuthContext)
         <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
 
             <div className="flex py-5 items-center justify-between md:block">
-                <a href="/" className='flex items-center'>
+                <a href="/dashboard" className='flex items-center'>
                     <img src={tiger} width={50} height={50} alt="" />
                 </a>
             <div className='md:hidden'>
