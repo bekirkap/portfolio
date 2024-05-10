@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import tiger from "../img/pngwing.com.png"
 import { NavLink } from 'react-router-dom'
 import { logoutIcon, openNavbar, closeNavbar } from '../helpers/icons'
 import "../index.css"
+import { AuthContext } from '../context/AuthProvider'
 
 const Navbar = () => {
     const navigation = [
         {
           title: "Home",
-          path: "/dashboard/home",
+          path: "/dashboard",
         },
         {
           title: "Products",
@@ -20,7 +21,7 @@ const Navbar = () => {
         },]
 
 const [show, setShow] = useState(false)
-
+const {logout} = useContext(AuthContext)
 
 
 
@@ -57,7 +58,9 @@ const [show, setShow] = useState(false)
                                 
                 </ul>
                 <div className='flex-1 gap-x-6 items-center justify-end mt-2 space-y-6 md:flex md:space-y-0 md:mt-0'>
-                    <NavLink className="flex items-center justify-center gap-x-1 py-2 px-4 font-medium text-orange-300 hover:bg-main hover:text-white active:bg-gray-900 rounded-full md:inline-flex">
+                    <NavLink className="flex items-center justify-center gap-x-1 py-2 px-4 font-medium text-orange-300 hover:bg-main hover:text-white active:bg-gray-900 rounded-full md:inline-flex"
+                    to="/"
+                    onClick={() => logout()}>
                         {logoutIcon} 
                     </NavLink>    
                 </div>

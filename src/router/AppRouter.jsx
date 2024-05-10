@@ -11,11 +11,10 @@ import PrivateRouter from "./PrivateRouter";
 const AppRouter = () => {
   return (
       <>
-      <Navbar/>
     <Routes>
       <Route path="/" element={ <Login/>}/>
       <Route path="/dashboard" element={<PrivateRouter/>}>
-        <Route path="/dashboard/home" element={ <Home/>}/>
+        <Route path="" element={ <Home/>}/>
         <Route path="about" element={ <About/>}/>
         <Route path="products" element={ <Products/>}/>
       </Route>
