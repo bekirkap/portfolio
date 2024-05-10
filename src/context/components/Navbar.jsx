@@ -8,15 +8,15 @@ const Navbar = () => {
     const navigation = [
         {
           title: "Home",
-          path: "/dashboard",
+          path: "/home",
         },
         {
           title: "Products",
-          path: "/dashboard/products",
+          path: "/products",
         },
         {
           title: "About",
-          path: "/dashboard/about",
+          path: "/about",
         },]
 
 const [show, setShow] = useState(false)
@@ -29,7 +29,7 @@ const [show, setShow] = useState(false)
         <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
 
             <div className="flex py-5 items-center justify-between md:block">
-                <a href="" className='flex items-center'>
+                <a href="/" className='flex items-center'>
                     <img src={tiger} width={50} height={50} alt="" />
                 </a>
             <div className='md:hidden'>
