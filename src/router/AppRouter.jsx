@@ -7,6 +7,7 @@ import Products from "../pages/Products";
 import Notfound from "../pages/Notfound"
 import Navbar from "../components/Navbar";
 import PrivateRouter from "./PrivateRouter";
+import ProductDetail from "../pages/ProductDetail";
 
 const AppRouter = () => {
   return (
@@ -17,6 +18,7 @@ const AppRouter = () => {
         <Route path="" element={ <Home/>}/>
         <Route path="about" element={ <About/>}/>
         <Route path="products" element={ <Products/>}/>
+        <Route path="products/:id" element={ <ProductDetail/>}/>
       </Route>
       <Route path="*" element={ <Notfound/>}/>
     </Routes>
